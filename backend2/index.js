@@ -8,10 +8,10 @@ app.use(cors())
 app.post('/api/submit-data', (req, res) => {
   if(isValidToken(req)){
     console.log('Token is valid');
-  return res.status(200).json({ message: 'Token Is Valid' });
+    return res.status(200).json({ message: 'Token Is Valid' });
   } 
-  console.log('InvalidToken');
-  return res.status(400).json({ message: 'Invalid Token'})
+    console.log('InvalidToken');
+    return res.status(400).json({ message: 'Invalid Token'})
   
 });
 
